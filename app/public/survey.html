@@ -1,108 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Friend Finder</title>
+  <title>FriendFinder</title>
+
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 </head>
+
 <body>
 
   <div class="container">
-    <div class="jumbotron">
-      <h1>Friend Finder</h1>
-      <h3>Answer the questions to be matched with a new friend!</h3>      
-    </div>
-    <div class="row">
 
-      <div class="col-lg-12">
 
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong>About You</strong></h3>
+    <h3><strong>Your Information</strong></h3>
+    <hr>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
+
+    <h4>Link to a Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
+    <br>
+    <h3>Questionnaire</h3>
+
+    <hr>
+    <p>Answer the following ten questions based on how strongly you agree or disagree with the statement. Move the slider to all the way to the left or right if you strongly agree or disagree. Keep it somewhere in the middle if your feelings are less strong.</p>
+    <br>
+
+
+    <h4>1. You would prefer not to discuss politics</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b><input type="range" min="1" max="5" value="1" class="slider1" id="q1"><b> Disagree </b>
           </div>
-          <div class="panel-body">
-            <form role="form">
 
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
-              </div>
+          <br>
 
-              <div class="form-group">
-                <label for="role">Link to Photo (Required)</label>
-                <input type="text" class="form-control" id="url">
-              </div>
-              <h3><strong>Question 1</strong></h3>
-              <h4>You would rather go out for coffee than a beer</h4>
-              <select class="form-control" id="exampleFormControlSelect1">                  
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                  <div id="q1_chosen" class="chosen-container chosen-container-single" style="width: 165px;" title=""></div>
-              </select>
-              <br>
-              <h3><strong>Question 2</strong></h3>
-              <h4>You enjoy going to sporting events</h4>
-              <select class="form-control" id="exampleFormControlSelect1">                  
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                  <div id="q2_chosen" class="chosen-container chosen-container-single" style="width: 165px;" title=""></div>
-                </select>
-                <br>
-            <h3><strong>Question 3</strong></h3>
-            <h4>You like to play tennis</h4>
-              <select class="form-control" id="exampleFormControlSelect1">                  
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
-                 <div id="q3_chosen" class="chosen-container chosen-container-single" style="width: 165px;" title=""></div>
-    
-              </select>
-            </form>
-            <br>
-            </div>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-star"></span> Find me a friend!</button>
-            </div>
+    <h4>2. You prefer going out for a beer over a coffee</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b><input type="range" min="1" max="5" value="1" class="slider1" id="q2"><b> Disagree </b>
           </div>
-        </div>
+          <br>
 
+    <h4>3. You would prefer to go outside and hike instead of something indoors</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b><input type="range" min="1" max="5" value="1" class="slider1" id="q3"><b> Disagree </b>
+          </div>
+          <br>
+
+
+    <h4>4. You like to travel</h4>
+    <br>
+ 
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q4"><b> Disagree</b>
+          </div>
+          <br>
+
+    <h4>5. You like dogs more than cats</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q5"><b> Disagree</b>
       </div>
-    </div>
+      <br>
+
+    <h4>6. You don't mind getting dirty</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q6"><b> Disagree</b>
+      </div>
+      <br>
+
+    <h4>7. You have goals that are not job related</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q7"><b> Disagree</b>
+      </div>
+      <br>
+
+    <h4>8. You value a work-life balance over more money</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q8"><b> Disagree</b>
+      </div>
+      <br>
+
+    <h4>9. You prefer to try something off the beaten path</h4>
+    <br>
+
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q9"><b> Disagree</b>
+      </div>
+      <br>
+
+    <h4>10. You don't like to wait in line for things</h4>
+   <br>
+    <div class="slidecontainer">
+        <b>Agree </b> <input type="range" min="1" max="5" value="1" class="slider1" id="q10"><b> Disagree</b>
+      </div>
+
+    <br>
+    <br>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+     Submit</button>
+
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="">GitHub Repo</a></p>
+      </div>
+    </footer>
+
   </div>
 
+  <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" src="https://www.script-tutorials.com/wp-content/uploads/2015/01/fimg-700x561.png" alt="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+
   <script type="text/javascript">
-    // Question: What does this code do?
-    $("#add-btn").on("click", function(event) {
+  
+    // Capture the form inputs
+    $("#submit").on("click", function(event) {
       event.preventDefault();
 
-      var newCharacter = {
-        name: $("#name").val().trim(),
-        role: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
-      };
-
-      // Question: What does this code do??
-      $.post("/api/characters", newCharacter)
-        .then(function(data) {
-          console.log(data);
-          alert("Adding character...");
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
         });
 
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+       
+       var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userData, function(data) {
+
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
+
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
     });
   </script>
+
 </body>
+
 </html>
