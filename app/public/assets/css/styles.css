@@ -1,7 +1,12 @@
-title {
+#title {
     font-family: 'Fredoka One', cursive;
 }
 
 h4 {
     font-family: 'Rubik', sans-serif;
+}
+
+#match-img {
+    width: 150px;
+    height: auto;
 }
